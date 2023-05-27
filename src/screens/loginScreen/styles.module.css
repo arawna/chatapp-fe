@@ -1,0 +1,22 @@
+.container {
+    margin-top: 200px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+}
+
+.register_text {
+    font-weight: bolder;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.input span {
+    margin-right: 10px;
+    font-weight: 400;
+}

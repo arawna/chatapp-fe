@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.chatlistpage{
+    flex:1;
+    border: 1px solid black;
+}
+
+.chatpage {
+    flex: 3;
+    border: 1px solid black;
+}
