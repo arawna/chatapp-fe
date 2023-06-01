@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import axios from "axios"
+import { apiUrl } from "../../config";
 
 
 const initialState = {
@@ -30,9 +31,10 @@ const { loginAction, logoutAction } = slice.actions
 const login = (cred) => async (dispatch) => {
     try {
         delete axios.defaults.headers.common["Authorization"]
-        const response = await axios.post("http://localhost:5000/users/login", cred)
+        const response = await axios.post(`${apiUrl}/users/login`, cred)
         axios.defaults.headers.common['Authorization'] = "Bearer " + response.data.token
         localStorage.setItem("cred",JSON.stringify(cred))
+        localStorage.setItem("jwt",response.data.token)
         dispatch(loginAction({...response.data,email:cred.email}))
         return { stat: true }
     } catch (error) {
@@ -47,7 +49,7 @@ const logout = () => async (dispatch) => {
 
 const register = (values) => async (dispatch) => {
     try {
-        await axios.post("http://localhost:5000/users/register",values)
+        await axios.post(`${apiUrl}/users/register`,values)
         await dispatch(login({email:values.email,password:values.password}))
         return { stat: true }
     } catch (error) {
