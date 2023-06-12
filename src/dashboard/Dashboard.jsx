@@ -25,9 +25,9 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className='align-items-center text-end me-2'>
-        <span className='text-dark me-3'>
-           {email}
+      <div className='align-items-center text-end me-2' style={{backgroundColor:"#0A121A"}}>
+        <span style={{color:"#9FA3B5"}}>
+           {email+" "}
         </span>
         <button className='btn btn-danger' onClick={logOut}>Çıkış yap</button>
       </div>

@@ -2,5 +2,14 @@
     text-align: center;
     font-size: 40px;
     color: blue;
+    min-height: 100vh;
   }
-  
+  .messageBox{
+    border: 2px solid #2F55B8;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    background: rgb(30,59,118);
+    background: linear-gradient(82deg, rgba(30,59,118,1) 0%, rgba(47,85,184,1) 35%, rgba(30,59,118,1) 100%);
+    color: #9FA3B5;
+  }

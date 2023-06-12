@@ -7,9 +7,13 @@
 .chatlistpage{
     flex:1;
     border: 1px solid black;
+    background: rgb(108,128,172);
+    background: linear-gradient(228deg, rgba(108,128,172,1) 0%, rgba(159,163,181,1) 35%, rgba(108,128,172,1) 100%);
 }
 
 .chatpage {
     flex: 3;
     border: 1px solid black;
+    background: rgb(159,163,181);
+    background: linear-gradient(82deg, rgba(159,163,181,1) 0%, rgba(47,85,184,0.4724264705882353) 35%, rgba(159,163,181,1) 100%);
 }
